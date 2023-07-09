@@ -12,18 +12,18 @@ st.set_page_config(page_title="Meow", page_icon=":cat:")
 breed_list = ['Bengal', 'Bombay', 'Himalayan', 'Persian']
 
 @st.cache_resource
-def load_model_from_path(model_path):
+def load_model_from_path(model_path): # loading model
     model = load_model(model_path)
     print("Model loaded...")
     return model
 
-def preprocess_image(img):
+def preprocess_image(img): # input data preprocessing
     image_arr = img_to_array(img)
     image_arr = image_arr.reshape((1, image_arr.shape[0], image_arr.shape[1], image_arr.shape[2]))
     resized_img = preprocess_input(image_arr)
     return resized_img
 
-def predict_cat_breed(model, image_path, breed_list):
+def predict_cat_breed(model, image_path, breed_list): # prediction
     image = load_img(image_path, target_size = (256, 256))
     print("Image found...")
     print("Processing Image...")
