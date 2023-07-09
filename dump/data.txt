@@ -1,0 +1,3 @@
+website for cat breed popular in india - https://parenting.firstcry.com/articles/beautiful-cat-breeds-in-india-that-you-will-love-to-have-as-a-pet/
+data collected from kaggle, google images and a bit was cleaning was done
+datasets were tried to be made as balanced as possible
