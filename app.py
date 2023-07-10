@@ -34,7 +34,7 @@ def predict_cat_breed(model, image_path, breed_list): # prediction
 
 # add sessions for variables, so those can be tracked throughout the session
 if("model" not in st.session_state.keys()):
-    st.session_state["model"] = load_model_from_path('model\model_15_epoch.h5')
+    st.session_state["model"] = load_model_from_path('model/model_15_epoch.h5')
 
 model = st.session_state["model"]
 
