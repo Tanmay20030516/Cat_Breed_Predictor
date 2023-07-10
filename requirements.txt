@@ -5,3 +5,4 @@ seaborn==0.12.2
 opencv-python==4.8.0.74
 tensorflow==2.13.0
 streamlit==1.24.1
+python3==3.10.1
