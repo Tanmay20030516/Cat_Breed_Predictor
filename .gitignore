@@ -159,8 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# dirs to not track
+# dirs/files to not track
 data
 dump
 data/
 dump/
+model/cat_breed_classifier_pretrained_vgg16_15_epoch.h5
+helper/CAT_BREED_CLASSIFICATION.ipynb
