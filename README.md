@@ -47,3 +47,8 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 ## References
 + [https://www.tensorflow.org/api_docs/python/tf](https://www.tensorflow.org/api_docs/python/tf)
 + [https://docs.streamlit.io/](https://docs.streamlit.io/)
+
+## Future improvements to do
+_This repo is open to contributions_ 😊
++ Adding a **cat vs non-cat classifier** before **cat breed classifier** model, to **avoid** prediction on non-cat uploaded images.
++ Training the base (cat breed classifier) model on a better and cleaner data, and increasing the classes.
