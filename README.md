@@ -18,25 +18,25 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 ## Model
 *The architecture I chose was underfitting the data ( probably due to less training examples ) so then I decided to use pretrained model*
 + VGG16 architecture (in our model, the input shape was changed to **(256,256,3)** from **(224,224,3)** )
-![VGG16](helper\vgg16_image.png)
+![VGG16](helper/vgg16_image.png)
 + A pretrained VGG16 was used to carry out the classification task.
 + Since the VGG16 model was trained **ImageNet** dataset, it is capable of extracting minute details from the input images. This suits our purpose.
 + Output layer is a softmax layer outputting 4 class probabilities
-![model](helper\model.png)
+![model](helper/model.png)
 
 ## Performance
 + Since the **total** dataset was of about **4-5k images**, the model is pretty accurate. And scope of improvement in performance exists.
 + The model was trained for **15 epochs**, and below are some training plots -
-![loss](helper\Loss.png)
-![accuracy](helper\accuracy.png)
+![loss](helper/Loss.png)
+![accuracy](helper/accuracy.png)
 
 ## Result
 + The model achieved a **Precision** of **0.990595**, **Recall** of **0.913295**, **F1 Score** of **0.950376** and an **Accuracy** of **0.781385** on the **test** set.
 
 ## Working
-![working](helper\streamlit-app-2023-07-13-19-07-81.gif)
-![pg1](helper\Screenshot(309).png)
-![pg2](helper\Screenshot(310).png)
+![working](helper/streamlit-app-2023-07-13-19-07-81.gif)
+![pg1](helper/Screenshot(309).png)
+![pg2](helper/Screenshot(310).png)
 
 ## Running in local environment
 + clone this repo in local machine.
