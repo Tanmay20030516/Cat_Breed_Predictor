@@ -1,4 +1,4 @@
-# Cat Breed Predictor
+# Cat Breed Predictor ([app website](https://catbreedpredictor.streamlit.app/))
 
 ## About the project
 + This project uses **VGG16** model to predict breed of cat. The model was trained to predict a cat's breed among 4 classes *(Bengal, Bombay, Himalayan and Persian breeds)*.
