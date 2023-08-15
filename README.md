@@ -1,4 +1,4 @@
-# Cat Breed Predictor ([app website](https://catbreedpredictor.streamlit.app/))
+# Cat Breed Predictor ([app](https://catbreedpredictor.streamlit.app/))
 
 ## About the project
   This project uses **CNN** model to predict breed of cat. The model was trained to predict a cat's breed among 4 classes *(Bengal, Bombay, Himalayan and Persian breeds)*.
@@ -14,9 +14,9 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 + Streamlit (for deployment)
 + Albumentations (for data augmentation)
 
-## Model
-+ Below Architecture uses **4 Conv + Maxpooling blocks** followed by **global max-pooling** layer and **2 dense layers**.
-+ Output layer is a softmax layer outputting 4 class probabilities.
+## Model Architecture
++ Below Architecture uses **4 convolution + max-pooling blocks** followed by **global max-pooling** layer and **2 dense layers**.
++ **Output** layer is a **softmax** layer outputting the class probabilities.
 ![model](helper/own-model.png)
 
 ## Performance
@@ -26,7 +26,7 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 ![accuracy](helper/own-model-accuracy.png)
 
 ## Result
-+ The model achieved a **Precision** of **0.9966528**, **Recall** of **0.9996526**, **F1 Score** of **0.9981505** and an **Accuracy** of **0.9857292** on the **test** set.
+  The model achieved a **Precision** of **0.9966528**, **Recall** of **0.9996526**, **F1 Score** of **0.9981505** and an **Accuracy** of **0.9857292** on the **test** set.
 
 ## Working
 ![working](helper/streamlit-app-2023-07-13-19-07-81.gif)
@@ -40,10 +40,10 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 + in the terminal, type `streamlit run app.py`.
 
 ## References
-+ [https://www.tensorflow.org/api_docs/python/tf](https://www.tensorflow.org/api_docs/python/tf)
-+ [https://docs.streamlit.io/](https://docs.streamlit.io/)
-
-## Future improvements to do
++ [Tensorflow](https://www.tensorflow.org/api_docs/python/tf)
++ [Streamlit](https://docs.streamlit.io/)
++ [Image augmentation via Albumentations](https://albumentations.ai/docs/getting_started/image_augmentation/)
+<!-- ## Future improvements to do
 _This repo is open to contributions_ 😊
 + Adding a **cat vs non-cat classifier** before **cat breed classifier** model, to **avoid** prediction on non-cat uploaded images.
-+ ~~Training the base (cat breed classifier) model on a better and cleaner data, and increasing the classes.~~ (Done)
++ ~~Training the base (cat breed classifier) model on a better and cleaner data, and increasing the classes.~~ (Done) -->
