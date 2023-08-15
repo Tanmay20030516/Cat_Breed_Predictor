@@ -1,11 +1,10 @@
 # Cat Breed Predictor ([app website](https://catbreedpredictor.streamlit.app/))
 
 ## About the project
-+ This project uses **VGG16** model to predict breed of cat. The model was trained to predict a cat's breed among 4 classes *(Bengal, Bombay, Himalayan and Persian breeds)*.
-+ **VGG16** is a very powerful CNN architecture which is trained on **ImageNet** dataset (contains more than a **million images** and **1000 classes**).
+  This project uses **CNN** model to predict breed of cat. The model was trained to predict a cat's breed among 4 classes *(Bengal, Bombay, Himalayan and Persian breeds)*.
 
 ## Dataset
-Dataset was collected from **Kaggle** and **Google Images** (via chrome extension). Some manual cleaning was also done.
+Dataset was collected from **Kaggle** and **Google Images** (via chrome extension). Some manual cleaning was also done. Augmentation was done to increase the dataset size from **5k** images to **100k** images.
 
 ## Tools
 + Numpy
@@ -13,25 +12,21 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 + Tensorflow
 + OpenCV
 + Streamlit (for deployment)
-+ VGG16
++ Albumentations (for data augmentation)
 
 ## Model
-*The architecture I chose was underfitting the data ( probably due to less training examples ) so then I decided to use pretrained model*
-+ VGG16 architecture (in our model, the input shape was changed to **(256,256,3)** from **(224,224,3)** )
-![VGG16](helper/vgg16_image.png)
-+ A pretrained VGG16 was used to carry out the classification task.
-+ Since the VGG16 model was trained **ImageNet** dataset, it is capable of extracting minute details from the input images. This suits our purpose.
-+ Output layer is a softmax layer outputting 4 class probabilities
-![model](helper/model.png)
++ Below Architecture uses **4 Conv + Maxpooling blocks** followed by **global max-pooling** layer and **2 dense layers**.
++ Output layer is a softmax layer outputting 4 class probabilities.
+![model](helper/own-model.png)
 
 ## Performance
-+ Since the **total** dataset was of about **4-5k images**, the model is pretty accurate. And scope of improvement in performance exists.
-+ The model was trained for **15 epochs**, and below are some training plots -
-![loss](helper/Loss.png)
-![accuracy](helper/accuracy.png)
++ The model was trained for **40 epochs**, and **keras callback** was added to **save** the best model (around 37th or 38th epoch).
++ Below are the training plots -
+![loss](helper/own-model-loss.png)
+![accuracy](helper/own-model-accuracy.png)
 
 ## Result
-+ The model achieved a **Precision** of **0.990595**, **Recall** of **0.913295**, **F1 Score** of **0.950376** and an **Accuracy** of **0.781385** on the **test** set.
++ The model achieved a **Precision** of **0.9966528**, **Recall** of **0.9996526**, **F1 Score** of **0.9981505** and an **Accuracy** of **0.9857292** on the **test** set.
 
 ## Working
 ![working](helper/streamlit-app-2023-07-13-19-07-81.gif)
@@ -51,4 +46,4 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 ## Future improvements to do
 _This repo is open to contributions_ 😊
 + Adding a **cat vs non-cat classifier** before **cat breed classifier** model, to **avoid** prediction on non-cat uploaded images.
-+ Training the base (cat breed classifier) model on a better and cleaner data, and increasing the classes.
++ ~~Training the base (cat breed classifier) model on a better and cleaner data, and increasing the classes.~~ (Done)
