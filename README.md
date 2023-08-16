@@ -4,7 +4,7 @@
   This project uses **CNN** model to predict breed of cat. The model was trained to predict a cat's breed among 4 classes *(Bengal, Bombay, Himalayan and Persian breeds)*.
 
 ## Dataset
-Dataset was collected from **Kaggle** and **Google Images** (via chrome extension). Some manual cleaning was also done. Augmentation was done to increase the dataset size from **5k** images to **100k** images.
+Dataset was collected from **Kaggle** and **Google Images** (via chrome extension). Some manual cleaning was also done. Augmentation was done to increase the dataset size from **4k** images to **40k** images.
 
 ## Tools
 + Numpy
@@ -20,13 +20,13 @@ Dataset was collected from **Kaggle** and **Google Images** (via chrome extensio
 ![model](helper/own-model.png)
 
 ## Performance
-+ The model was trained for **40 epochs**, and **keras callback** was added to **save** the best model (around 37th or 38th epoch).
++ The model was trained for **40 epochs**, and **keras callback** was added to **save** the best model.
 + Below are the training plots -
-![loss](helper/own-model-loss.png)
-![accuracy](helper/own-model-accuracy.png)
+![loss](helper/own_model_loss.png)
+![accuracy](helper/own_model_accuracy.png)
 
 ## Result
-  The model achieved a **Precision** of **0.9966528**, **Recall** of **0.9996526**, **F1 Score** of **0.9981505** and an **Accuracy** of **0.9857292** on the **test** set.
+  The model achieved a **Precision** of **0.92008**, **Recall** of **0.97260**, **F1 Score** of **0.94561** and an **Accuracy** of **0.78853** on the (un-augmented) **test** set.
 
 ## Working
 ![working](helper/streamlit-app-2023-07-13-19-07-81.gif)
