@@ -59,7 +59,7 @@ if img_actually_uploaded:
     if st.button(":red[Predict meow meow]", key="prediction"):
         progress_text = "Prediction in progress, please wait..."
         my_bar = st.progress(0, text=progress_text)
-        for percent_complete in range(100):
+        for percent_complete in range(101):
             time.sleep(0.1)
             my_bar.progress(percent_complete + 10, text=progress_text)
         pred_breed = predict_cat_breed(model, uploaded_image_path, breed_list)
